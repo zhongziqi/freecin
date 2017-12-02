@@ -37,6 +37,8 @@ li{list-style-type: none;}
 .header .register_login .register{width:85px;height:40px;border-radius:5px;color: #fff;text-align: center;line-height: 40px;background: #0885F3 100%}
 
 /*首页样式*/
+.section .first_img>img{position: relative;width: 100%;height: auto;}
+.section .first_img>.cover{position: absolute;top: 0;left: 0;right: 0;margin-left: auto;margin-right: auto;}
 .section .succ_case_list{margin-top: 73px;}
 .section .succ_case_list dl{width:373px;border: 1px solid transparent;padding: 8px;}
 .section .succ_case_list dl:hover{border: 1px solid #0885F3;}
