@@ -90,23 +90,33 @@ function clearCookie(name) {
 
 //头部组件
 header = Vue.extend({
-	template:`      <div class="box_center clear " >
-	        <div class="logo fl pointer">
-	          <img src="img/logo_.png" alt="">
-	        </div>
-	        <ul class="lists fl">
-	          <li class="fl"><a href="#">首页</a></li>
-	          <li class="fl"><a href="#">解决方案</a></li>
-	          <li class="fl"><a href="#">文档&工具</a></li>
-	          <li class="fl"><a href="#">博客</a></li>
-	          <li class="fl"><a href="#">关于我们</a></li>
+	template:`          <div class="box_center clear " >
+	    	        <div class="logo fl pointer">
+	    	          <img src="img/logo_.png" alt="">
+	    	        </div>
+	    	        <ul class="lists fl">
+	    	          <li class="fl"><a href="#">首页</a></li>
+	    	          <li class="fl solutios_head"><a href="#">解决方案</a>
+	                  <div class="solutions">
+	                    <ul class="clear  box_center">
+	                      <li class="fl pointer">智能短信解决方案</li>
+	                      <li class="fl pointer">智能语音解决方案</li>
+	                      <li class="fl pointer">方案定制</li>
+	                      <li class="fl pointer">价格</li>
+	                    </ul>
+	                  </div>
 
-	        </ul>
-	        <div class="register_login fr ">
-	          <button class="fl login pointer">登录</button>
-	          <button class="fr register pointer">注册</button>
-	        </div>
-	      </div>`,
+	                </li>
+	    	          <li class="fl"><a href="#">文档&工具</a></li>
+	    	          <li class="fl"><a href="#">博客</a></li>
+	    	          <li class="fl"><a href="#">关于我们</a></li>
+
+	    	        </ul>
+	    	        <div class="register_login fr ">
+	    	          <button class="fl login pointer">登录</button>
+	    	          <button class="fr register pointer">注册</button>
+	    	        </div>
+	    	</div>`,
 									data:function(){
 										return{
 										}
@@ -124,6 +134,90 @@ var header = new Vue({
 });
 
 
+// partnership
+partnership = Vue.extend({
+	template:`<div class="partnership">
+		<div class="title">
+			<div class="sub_title">
+				<img src="img/left_white.png" alt="">
+				<span>我们与他们一起前行</span>
+				<img src="img/right_white.png" alt="">
+			</div>
+			<p>我们帮助他们实现价值</p>
+		</div>
+		<!-- 滑动开始 -->
+		<div class="swiper-container box_center" style="height:119px;margin-top:94px;margin-bottom:127px;">
+				<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+				</div>
+		</div>
+		<div class="swiper-pagination outside_pagination "></div>
+	</div>`,
+									data:function(){
+										return{
+										}
+									},
+									created:function(){
+									},
+									methods:{
+									},
+									mounted(){
+									}
+});
+Vue.component("common-partnership", partnership);
+var partnership = new Vue({
+	el: "#partnership"
+});
+
+
+
+
+
+
+
+// 联系我们
+contact = Vue.extend({
+	template:`        <div class="contact">
+	          <img src="img/bg_2.png" alt="">
+	          <div class="cover">
+	            <div class="title">
+	              <div class="sub_title">
+	                <img src="img/left_white.png" alt="">
+	                <span >联系我们</span>
+	                <img src="img/right_white.png" alt="">
+	              </div>
+	              <p>请填写下面的表格或发送电子邮件至<span>info@freecin.com</span></p>
+	            </div>
+	            <div class="name_email clear">
+	              <input class="fl" type="text" name="" value="" placeholder="您的姓名*">
+	              <input class="fl" type="text" name="" value="" placeholder="您的Email*">
+	            </div>
+	            <div class="needs">
+	              <input type="text" name="" value="" placeholder="您的需求*">
+	            </div>
+	            <div class="button">发送</div>
+	          </div>
+	        </div>`,
+									data:function(){
+										return{
+										}
+									},
+									created:function(){
+									},
+									methods:{
+									},
+									mounted(){
+									}
+});
+Vue.component("common-contact", contact);
+var contact = new Vue({
+	el: "#contact"
+});
 
 //尾部组件
 footer = Vue.extend({

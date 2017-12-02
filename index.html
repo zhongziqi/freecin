@@ -13,12 +13,109 @@
     <script type="text/javascript" src='js/vue.js'></script>
   </head>
   <body>
+    <div class="header" id="header" style="display:none;">
+      <common-header></common-header>
+    </div>
     <div class="section">
       <!-- 第一页  -->
       <div class="first_img">
         <img src="img/new-york-city-buildings-and-water-towers_4460x4460@2x.png" alt="">
-        <div class="cover box_center">
+        <div class="cover">
+          <div class="box_center clear  header" >
+                  <div class="logo fl pointer">
+                    <img src="img/logo_.png" alt="">
+                  </div>
+                  <ul class="lists fl">
+                    <li class="fl"><a href="#">首页</a></li>
+                    <li class="fl"><a href="#">解决方案</a></li>
+                    <li class="fl"><a href="#">文档&工具</a></li>
+                    <li class="fl"><a href="#">博客</a></li>
+                    <li class="fl"><a href="#">关于我们</a></li>
 
+                  </ul>
+                  <div class="register_login fr ">
+                    <button class="fl login pointer">登录</button>
+                    <button class="fr register pointer">注册</button>
+                  </div>
+          </div>
+          <div class="describe">
+            <p>亚洲领先云信息通信平台</p>
+            <p>将短信传递和语音识别交互整合到您的业务中</p>
+            <div class="clear btns">
+              <button class="fl pointer" type="button" name="button">了解详情</button>
+              <button class="fr pointer" type="button" name="button">免费试用</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 我们能为您做什么 -->
+      <div class="what_we_can">
+        <img src="img/new-york-city-buildings-and-water-towers_4460x4460@2x.png" alt="">
+        <div class="cover box_center">
+          <div class="title">
+            <div class="sub_title">
+              <img src="img/left_white.png" alt="">
+              <span >我们能为您做什么</span>
+              <img src="img/right_white.png" alt="">
+            </div>
+            <p>赋予您有价值的云通信的互动能力</p>
+          </div>
+          <div class=" lists">
+            <dl class="fl">
+              <dt><img src="img/we_one.png" alt=""> </dt>
+              <dd>可编程的SMS</dd>
+              <dd>一个交换文本和图片消息的API。包括Copilot软件，可以节省数月的定制开发。</dd>
+              <dd>了解更多</dd>
+              <dd class="triangle"><img src="img/tirangle.png" alt="">  </dd>
+            </dl>
+            <dl class="fl">
+              <dt><img src="img/we_one.png" alt=""> </dt>
+              <dd>可编程语言</dd>
+              <dd>API和智能服务只需几行代码即可构建您所需的精确呼叫体验。没有电信知识要求。</dd>
+              <dd>了解更多</dd>
+              <dd class="triangle"><img src="img/tirangle.png" alt="">  </dd>
+
+            </dl>
+            <dl class="fl">
+              <dt><img src="img/we_one.png" alt=""> </dt>
+              <dd>方案定制</dd>
+              <dd>定制企业所需，为企业创造真正的价值。</dd>
+              <dd>了解更多</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!--我们能做什么对应的列表  -->
+      <div class="we_lists">
+        <div class="box_center clear">
+          <dl class="fl">
+            <dt><img src="img/we_list_one.png" alt=""> </dt>
+            <dd>智能安全</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_two.png" alt=""> </dt>
+            <dd>移动API验证</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_three.png" alt=""> </dt>
+            <dd>流程监测</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_four.png" alt=""> </dt>
+            <dd>双向短信</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_seven.png" alt=""> </dt>
+            <dd>BLUK API</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_five.png" alt=""> </dt>
+            <dd>本地转换器</dd>
+          </dl>
+          <dl class="fl">
+            <dt><img src="img/we_list_six.png" alt=""> </dt>
+            <dd>UNICODE支持</dd>
+          </dl>
         </div>
       </div>
       <!-- 成功案例 -->
@@ -68,27 +165,8 @@
         </div>
       </div>
       <!-- partnership -->
-      <div class="partnership">
-        <div class="title">
-          <div class="sub_title">
-            <img src="img/left_white.png" alt="">
-            <span>我们与他们一起前行</span>
-            <img src="img/right_white.png" alt="">
-          </div>
-          <p>我们帮助他们实现价值</p>
-        </div>
-        <!-- 滑动开始 -->
-        <div class="swiper-container box_center" style="height:119px;margin-top:94px;margin-bottom:127px;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-                <div class="swiper-slide"><img src="img/group.png" alt=""></div>
-            </div>
-        </div>
-        <div class="swiper-pagination outside_pagination "></div>
+      <div id="partnership">
+        <common-partnership></common-partnership>
       </div>
       <!-- caculator -->
       <div class="caculator">
@@ -121,27 +199,8 @@
         </div>
       </div>
       <!-- 联系我们 -->
-      <div class="contact">
-        <img src="img/bg_2.png" alt="">
-        <div class="cover">
-          <div class="title">
-            <div class="sub_title">
-              <img src="img/left_white.png" alt="">
-              <span >联系我们</span>
-              <img src="img/right_white.png" alt="">
-            </div>
-            <p>请填写下面的表格或发送电子邮件至<span>info@freecin.com</span></p>
-          </div>
-          <div class="name_email clear">
-            <input class="fl" type="text" name="" value="" placeholder="您的姓名*">
-            <input class="fl" type="text" name="" value="" placeholder="您的Email*">
-          </div>
-          <div class="needs">
-            <input type="text" name="" value="" placeholder="您的需求*">
-          </div>
-          <div class="button">发送</div>
-        </div>
-
+      <div  id="contact">
+          <common-contact></common-contact>
       </div>
     </div>
 
