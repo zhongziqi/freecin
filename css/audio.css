@@ -1,0 +1,6 @@
+.special_{height: 139px;}
+.ability .ps>p{position: relative;}
+.ability .ps>p>span{position: absolute;color: #0885F3;}
+.ability .ps>p>span.left{top: -10px;left:65px;}
+.ability .ps>p>span.right{top: -10px;right: 65px;}
+.text_solutions .ability .ps{width: 1200px!important;}

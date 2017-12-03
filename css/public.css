@@ -82,7 +82,7 @@ li{list-style-type: none;}
 .section .ready>.cover>p:first-child{text-align: center;color: #000;font-size: 64px;word-spacing: .42px;line-height: 90px;margin-left: auto;margin-right: auto;}
 .button{margin-top: 70px;width:220px;height:48px;background:rgba(8,133,243,1);border-radius: 4px ;font-size: 18px;color: #fff;text-align: center;line-height: 48px;margin-left: auto;margin-right: auto;}
 .section .contact{position: relative;}
-.section .contact>img{height: 624px;width: 100%;object-fit: cover;}
+.section .contact>img{height: 624px;width: 100%;object-fit: cover;vertical-align: bottom;}
 .section .contact>.cover{position: absolute;top: 70px;left: 0;right: 0;}
 .section .contact>.cover .sub_title{color: #fff!important;}
 .section .contact>.cover p{color: #B6B6B6;}
