@@ -1,6 +1,6 @@
 
 
-var api = 'http://big.dankal.cn/api';
+var api = 'http://freecin.dankal.cn/api';
 
 
 //验证手机号码
@@ -95,26 +95,26 @@ header = Vue.extend({
 	    	          <img src="img/logo_.png" alt="">
 	    	        </div>
 	    	        <ul class="lists fl">
-	    	          <li class="fl"><a href="#">首页</a></li>
+	    	          <li class="fl"><a href="index.html">首页</a></li>
 	    	          <li class="fl solutios_head"><a href="#">解决方案</a>
 	                  <div class="solutions">
 	                    <ul class="clear  box_center">
-	                      <li class="fl pointer">智能短信解决方案</li>
-	                      <li class="fl pointer">智能语音解决方案</li>
-	                      <li class="fl pointer">方案定制</li>
-	                      <li class="fl pointer">价格</li>
+	                      <li class="fl pointer">  <a href="text_solutinos.html">智能短信解决方案</a></li>
+	                      <li class="fl pointer"><a href="text_solutinos.html">智能语音解决方案</a></li>
+	                      <li class="fl pointer"><a href="custon.html">方案定制</a></li>
+	                      <li class="fl pointer"><a href="price.html">价格</a></li>
 	                    </ul>
 	                  </div>
 
 	                </li>
-	    	          <li class="fl"><a href="#">文档&工具</a></li>
-	    	          <li class="fl"><a href="#">博客</a></li>
-	    	          <li class="fl"><a href="#">关于我们</a></li>
+	    	          <li class="fl"><a href="tools.html">文档&工具</a></li>
+	    	          <li class="fl"><a href="blog.html">博客</a></li>
+	    	          <li class="fl"><a href="about.html">关于我们</a></li>
 
 	    	        </ul>
 	    	        <div class="register_login fr ">
-	    	          <button class="fl login pointer">登录</button>
-	    	          <button class="fr register pointer">注册</button>
+	    	          <a  href='login.html' class="fl login pointer">登录</a>
+	    	          <a href='register.html' class="fr register pointer">注册</a>
 	    	        </div>
 	    	</div>`,
 									data:function(){
@@ -160,6 +160,7 @@ partnership = Vue.extend({
 	</div>`,
 									data:function(){
 										return{
+											swiper:''
 										}
 									},
 									created:function(){
@@ -167,6 +168,15 @@ partnership = Vue.extend({
 									methods:{
 									},
 									mounted(){
+										// if(!this.swiper){
+											var swiper = new Swiper('.swiper-container', {
+												pagination: '.swiper-pagination',
+												slidesPerView:5,
+												paginationClickable: true,
+												uniqueNavElements :false
+											});
+										// }
+
 									}
 });
 Vue.component("common-partnership", partnership);
@@ -230,16 +240,16 @@ footer = Vue.extend({
 	          </div>
 	          <div class="fl middle">
 	            <ul class="clear">
-	              <li><a href="#">首页</a></li>
+	              <li><a href="index.html">首页</a></li>
 	              <li><a href="#">解决方案</a></li>
-	              <li><a href="#">博客</a></li>
-	              <li><a href="#">关于我们</a></li>
+	              <li><a href="blog.html">博客</a></li>
+	              <li><a href="about.html">关于我们</a></li>
 	              <li><a href="#"></a></li>
-	              <li><a href="#">短信解决方案</a></li>
+	              <li><a href="text_solutinos.html">短信解决方案</a></li>
 	              <li><a href="#"></a></li>
 	              <li><a href="#"></a></li>
 	              <li><a href="#"></a></li>
-	              <li><a href="#">语音解决方案</a></li>
+	              <li><a href="audio_solutions.html">语音解决方案</a></li>
 	            </ul>
 	            <p class="hot_line">企业热线 ：400-071-168 企业邮箱：info@freecin.com</p>
 	            <p>企业地址 ：XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>

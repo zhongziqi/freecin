@@ -36,6 +36,7 @@ strong,i{font-style: normal;font-weight: normal;}
 .header .lists{line-height: 80px;margin-left: 230px;}
 .header .lists li{margin-right: 66px;}
 .header .lists a{font-size:14px;color:rgba(255,255,255,1);line-height:20px;}
+.header .lists .pointer a{color: #000;}
 .header .register_login{line-height: 80px;margin-top: 20px;}
 .header .register_login .login{margin-right: 10px;width:85px;height:40px;border-radius:5px;border: 1px solid #fff;color: #fff;text-align: center;line-height: 40px;}
 .header .register_login .register{width:85px;height:40px;border-radius:5px;color: #fff;text-align: center;line-height: 40px;background: #0885F3 100%}
@@ -82,7 +83,7 @@ strong,i{font-style: normal;font-weight: normal;}
 .section .ready>img{height: 444px;width: 100%;object-fit: cover;}
 .section .ready>.cover{position: absolute;top: 105px;left: 0;right: 0;}
 .section .ready>.cover>p:first-child{text-align: center;color: #000;font-size: 64px;word-spacing: .42px;line-height: 90px;margin-left: auto;margin-right: auto;}
-.button{margin-top: 70px;width:220px;height:48px;background:rgba(8,133,243,1);border-radius: 4px ;font-size: 18px;color: #fff;text-align: center;line-height: 48px;margin-left: auto;margin-right: auto;}
+.button{cursor: pointer;margin-top: 70px;width:220px;height:48px;background:rgba(8,133,243,1);border-radius: 4px ;font-size: 18px;color: #fff;text-align: center;line-height: 48px;margin-left: auto;margin-right: auto;}
 .section .contact{position: relative;}
 .section .contact>img{height: 624px;width: 100%;object-fit: cover;vertical-align: bottom;}
 .section .contact>.cover{position: absolute;top: 70px;left: 0;right: 0;}

@@ -4,10 +4,11 @@
     background: url('../img/new-york-city-buildings-and-water-towers_4460x4460@2x.png') no-repeat;
     background-size: auto 719px;
     position: relative;
+    background-size: 100%;
 }
 .main .the_box{
     width:685px;
-    height:434px; 
+    height:434px;
     background:rgba(255,255,255,1);
     position: absolute;
     left: 0;
@@ -31,7 +32,7 @@
 }
 .main .username{
     width:544px;
-    height:49px; 
+    height:49px;
     border: 1px solid #DBDBDB;
     padding-left: 18px;
     font-size:16px;
@@ -44,7 +45,7 @@
 }
 .main .pwd{
     width:544px;
-    height:49px; 
+    height:49px;
     border: 1px solid #DBDBDB;
     padding-left: 18px;
     font-size:16px;
@@ -72,9 +73,9 @@
 }
 .main .reg_style{
     width:166px;
-    height:48px; 
+    height:48px;
     border: 1px solid #666666;
-    border-radius: 4px ; 
+    border-radius: 4px ;
     font-size:18px;
     font-family:PingFangSC-Regular;
     color:rgba(102,102,102,1);
@@ -84,12 +85,12 @@
 }
 .main .login_style{
     width:166px;
-    height:48px; 
+    height:48px;
     background:rgba(8,133,243,1);
     border-radius: 4px ;
     font-size:18px;
     font-family:PingFangSC-Regular;
     color:rgba(255,255,255,1);
-    line-height:48px; 
+    line-height:48px;
     text-align: center;
 }
