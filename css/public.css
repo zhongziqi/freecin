@@ -4,6 +4,7 @@ body{color: #333333;font-size: 12px;line-height: 1.5;font-family:'myFirstFont',"
 button,input,select,textarea{vertical-align: middle;border: 0; border-radius: 0 ;background: none ;color:inherit;font-size: inherit;outline: none; resize:none;position: relative;}
 a{color: #333333;text-decoration: none;}
 li{list-style-type: none;}
+strong,i{font-style: normal;font-weight: normal;}
 ::-webkit-input-placeholder {color:#999;}
 :-moz-placeholder {color:#999;}
 ::-moz-placeholder {color:#999;}
@@ -21,6 +22,7 @@ li{list-style-type: none;}
 .pointer{cursor: pointer;}
 .box_center{width: 1200px;margin-right: auto;margin-left: auto;}
 
+.img_cover{width: 100%;height: 100%;object-fit: cover};
 
 /*首页公共样式*/
 .main_page>img{width: 100%;}
@@ -80,6 +82,9 @@ li{list-style-type: none;}
 .section .contact>.cover .name_email>.needs>input{padding-bottom: 12px;}
 
 
+.main{width: 100%;min-height: 680px;}
+.main .the_line{width: 27px;height: 2px;background: #0885F3;margin: 0 auto; margin-bottom: 37px;}
+.main .sub_title{margin-bottom: 25px;}
 /*尾部公共样式*/
 .footer .footer_top{height: 220px; background:rgba(57,57,57,1);padding-top: 40px;}
 .footer .footer_bottom{font-size:14px;color:rgba(153,153,153,1);line-height:20px;text-align: center;background:rgba(47,47,47,1);height: 67px;line-height: 67px;}

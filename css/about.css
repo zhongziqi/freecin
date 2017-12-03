@@ -1,0 +1,283 @@
+.main .banner{
+    width: 100%;
+    height: 543px;
+    margin-bottom: 83px;
+    position: relative;
+}
+.main .banner .icon{
+    width: 100px;
+    height: 130px;
+    margin-bottom: 72px;
+}
+.main .banner .banner_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    left: 510px;
+}
+.main .banner .icon_txt{
+    width:100%;
+    height:64px; 
+    font-size:64px;
+    font-family:BigJohn;
+    color:rgba(255,255,255,1);
+    line-height:77px;
+    text-align: center;
+}
+.main> .company_detail .the_artical .txt{
+    font-size:24px;
+    font-family:PingFangSC-Regular;
+    color:rgba(102,102,102,1);
+    line-height:39px;
+    text-align: center;
+}
+.main> .company_detail{
+    margin-bottom: 66px;
+}
+.main .the_width{
+    width: 100%!important;
+    height: 100%!important;
+}
+.main .the_swiper{
+    width: 1300px;
+    margin-bottom: 66px;
+}
+.main .the_history{
+    width:100%;
+    height:757px; 
+    background: url('../img/new-york-city-buildings-and-water-towers_4460x4460@2x.png');
+    background-position: center center;
+    background-size: auto 100%;
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+.main .the_swiper{
+    width: 100%;
+    height: 543px;
+}
+
+.main .icon_box{
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-self: center;
+    margin-top: 167px;
+    margin-bottom: 102px;
+}
+.main .one_box{
+    width: 181px;
+    height: 238px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    margin-right: 78px;
+}
+.main .one_box:nth-last-of-type(1){
+    margin-right: 0;
+}
+.main .the_top{
+    width: 100%;
+    height: 88px;
+
+}
+.main .the_mid{
+    width: 33px;
+    height: 33px;
+}
+.main .one_box>p{
+    width: 100%;
+    text-align: center;
+}
+.main .txt_box>p{
+    width:100%;
+    font-size:36px;
+    text-align: left;
+    font-family:PingFangSC-Light;
+    color:rgba(255,255,255,1);
+}
+.main .map_box{
+    width: 100%;
+    height: 831px;
+    margin-bottom: 66px;
+}
+.main .the_bottom{
+    margin-bottom: 53px;
+}
+.main .choose{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main .choose .the_box{
+    width:266px;
+    height:113px; 
+    border-radius: 3px ; 
+    padding: 29px 23px;
+    box-sizing: border-box;
+    padding-right: 19px;
+    border: 1px solid #E5E5E5;
+    margin-right: 46px;
+}
+.main .choose .the_box:nth-last-of-type(1){
+    margin-right: 0;
+}
+.main .title_p{
+    width:100%;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(51,51,51,1);
+    line-height:20px;
+    margin-right: 5px;
+    margin-bottom: 18px;
+}
+.main .title_span{
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:#898989;
+    line-height:20px;
+}
+.main .bottom_p{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .bottom_p strong{
+    font-weight: normal;
+    font-style: normal;
+}
+.main .bottom_p span{
+    font-size:12px;
+    font-family:PingFangSC-Regular;
+    color:rgba(153,153,153,1);
+}
+.main .bottom_p>i{
+    font-size:14px;
+    font-family:PingFangSC-Medium;
+    color:rgba(15,192,232,1);
+    font-style: normal;
+}
+.main .choose{
+    margin-bottom: 35px;
+}
+.main .d_one{
+    margin-bottom: 15px;
+}
+.main .d_two{
+    margin-bottom: 15px;
+}
+.main .the_mail{
+    margin-bottom: 43px;
+}
+.main .choose_detail h3{
+    font-size:12px;
+    font-family:PingFangSC-Medium;
+    color:#39393A;
+    line-height:18px;
+    font-weight: 900;
+}
+.main .choose_detail p{
+    font-size:12px;
+    font-family:PingFangSC-Medium;
+    color:rgba(74,74,74,1);
+    line-height:18px;
+}
+.main .the_mail strong{
+    display: block;
+    font-size:12px;
+    font-family:PingFangSC-Medium;
+    color:#262626;
+    line-height:17px;
+    font-weight: 900;
+}
+.main .the_mail i{
+    font-size:12px;
+    font-family:PingFangSC-Medium;
+    color:#4A4A4A;
+    line-height:17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

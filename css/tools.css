@@ -1,0 +1,73 @@
+.main{
+    min-height: 1200px;
+}
+.main .banner{
+    width:100%;
+    height:551px; 
+}
+.main .banner .bg_txt{
+    width: 702px;
+    position: absolute;
+    top: 180px;
+    left: 300px;
+}
+.main .w_title{
+    font-size:64px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+}
+.main .m_top{
+    padding-top: 43px;
+    font-size: 24px;
+    color: #fff;
+}
+.main .bg_box{
+    padding-top: 76px;
+    padding-bottom: 89px;
+}
+.main .bg_box:nth-of-type(2n){
+    background: #F7F7F7;
+}
+.main .bg_box:nth-last-of-type(1){
+    margin-bottom: 122px;
+}
+.main .l_box{
+    width: 220px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 121px;
+}
+.main .the_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.main .a_title{
+    font-size:48px;
+    font-family:PingFangSC-Regular;
+    color:rgba(51,51,51,1);
+    margin-bottom: 40px;
+}
+.main .a_btn{
+    width:220px;
+    height:48px; 
+    background:rgba(8,133,243,1);
+    border-radius: 4px ; 
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height:48px;
+    text-align: center;
+}
+.main .txt_box{
+    display: block;
+    width:861px;
+    height:66px; 
+    font-size:24px;
+    font-family:PingFangSC-Regular;
+    color:rgba(51,51,51,1);
+    line-height:33px;
+}
