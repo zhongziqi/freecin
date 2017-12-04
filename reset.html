@@ -15,15 +15,15 @@
     <div class="header" id="header" >
       <common-header></common-header>
     </div>
-    <div class="register_ reset_">
+    <div class="register_ reset_" id="main">
       <div class="frame">
         <p class="title">重置你的密码</p>
         <div class="clear name">
           <p>重置密码链接将被发送到以下电子邮件地址</p>
         </div>
         <div class="clear name reset">
-          <input class="fl" type="text" class="fl" placeholder="Email" name="" value="">
-          <p class="button fr pointer">重置</p>
+          <input class="fl" type="text" class="fl" placeholder="Email" >
+          <p class="button fr pointer" @click="toSend">重置</p>
         </div>
       </div>
     </div>

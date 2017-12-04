@@ -2,9 +2,8 @@
     width: 100%;
     height: 719px;
     background: url('../img/new-york-city-buildings-and-water-towers_4460x4460@2x.png') no-repeat;
-    background-size: auto 719px;
     position: relative;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 .main .the_box{
     width:685px;

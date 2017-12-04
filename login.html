@@ -20,12 +20,12 @@
      <div class='main' id="main">
         <div class="the_box">
            <p class="the_top">登陆</p>
-            <input class="username" type="text" placeholder="账号">
-            <input class="pwd" type="text" placeholder="密码">
+            <input class="username" type="text" placeholder="账号" ref="username">
+            <input class="pwd" type="text" placeholder="密码" ref="pwd">
             <div class="choose_btn">
-                <span class="forget_style pointer">忘记密码？</span>
-                <div class="reg_style pointer">免费注册</div>
-                <div class="login_style pointer">登录</div>
+                <a href="reset.html" class="forget_style pointer">忘记密码？</a>
+                <a href="register.html" class="reg_style pointer">免费注册</a>
+                <div class="login_style pointer" @click="toLogin">登录</div>
             </div>
         </div>
 
