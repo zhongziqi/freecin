@@ -9,6 +9,10 @@ function checkPhone(mobile) {
 		return false;
 	}
 }
+// 去除空格
+function replace_null(res){
+	return res.replace(/\s+/g, "");
+}
 
 // 验证邮箱
 function checkMail(mail){
@@ -126,6 +130,16 @@ header = Vue.extend({
 									methods:{
 									},
 									mounted(){
+                    // 获取七牛根路径
+										var domain = sessionStorage.getItem('domain');
+										if(domain==''||domain==null){
+											$.ajax({
+												url:api+'/index/domain',
+												success:function(res){
+													sessionStorage.setItem('domain',res.data.domain);
+												}
+											})
+										}
 									}
 });
 Vue.component("common-header", header);
@@ -204,22 +218,71 @@ contact = Vue.extend({
 	              <p>请填写下面的表格或发送电子邮件至<span>info@freecin.com</span></p>
 	            </div>
 	            <div class="name_email clear">
-	              <input class="fl" type="text" name="" value="" placeholder="您的姓名*">
-	              <input class="fl" type="text" name="" value="" placeholder="您的Email*">
+	              <input class="fl" type="text" name="" v-model='name' placeholder="您的姓名*">
+	              <input class="fl" type="text" name="" v-model="email" placeholder="您的Email*">
 	            </div>
 	            <div class="needs">
-	              <input type="text" name="" value="" placeholder="您的需求*">
+	              <input type="text" name="" v-model="needs" placeholder="您的需求*">
 	            </div>
-	            <div class="button">发送</div>
+	            <div class="button" @click='send()'>发送</div>
 	          </div>
 	        </div>`,
 									data:function(){
 										return{
+											name:'',
+											email:'',
+											needs:''
 										}
 									},
 									created:function(){
 									},
 									methods:{
+										send_needs:function(){
+											var name = replace_null(this.name);
+											var email = replace_null(this.email);
+											var needs = replace_null(this.needs);
+											if(name==''){
+												confirm('请输入用户名！')
+												return false;
+											}else if(email==''){
+												confirm('请输入邮箱！')
+												return false;
+											}else if(needs==''){
+												confirm('请输入需求！');
+												return false;
+											}else{
+												this.send_now(name,email,needs);
+											}
+										},
+										send_now:function(name,email,needs){
+											var token =getCookie('token');
+											$.ajax({
+												url:api+'/index/feedback',
+												method:'post',
+												headers:{
+													token:token
+												},
+												data:{
+													name:name,
+													email:email,
+													info:needs
+												},
+												success:function(res){
+													console.log(res);
+												}
+											})
+										},
+										send:function(){
+											var token = getCookie('token');
+											// var token = 'f4c7e0dfe6a0d89ec2303de0b7321f3b';
+											if(token==''||token==null){
+												confirm('请先登录操作!');
+												return false;
+											}else{
+												this.send_needs();
+											}
+
+										}
 									},
 									mounted(){
 									}

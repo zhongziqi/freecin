@@ -171,23 +171,23 @@
         <common-partnership></common-partnership>
       </div>
       <!-- caculator -->
-      <div class="caculator">
+      <div class="caculator" id='caculator'>
         <img src="img/bg_2.png" alt="">
-        <div class="clear ">
+        <div class="clear box_center">
           <dl class="fl">
-            <dt>122</dt>
+            <dt v-text='succ_box.case'></dt>
             <dd>成功案例</dd>
           </dl>
           <dl class="fl">
-            <dt>122</dt>
+            <dt v-text='succ_box.program'></dt>
             <dd>解决方案</dd>
           </dl>
           <dl class="fl">
-            <dt>122</dt>
+            <dt v-text='succ_box.employees'></dt>
             <dd>技术人员</dd>
           </dl>
           <dl class="fl">
-            <dt>122</dt>
+            <dt v-text='succ_box.customer'></dt>
             <dd>产品用户</dd>
           </dl>
         </div>
@@ -213,7 +213,7 @@
   </body>
   <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
   <script type="text/javascript" src='js/swiper.min.js'></script>
-  <script type="text/javascript" src='js/index.js'></script>
   <script type="text/javascript" src="js/vueComponent.js?ver=1.0"></script>
+  <script type="text/javascript" src='js/index.js'></script>
 
 </html>

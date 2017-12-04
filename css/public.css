@@ -74,9 +74,10 @@ strong,i{font-style: normal;font-weight: normal;}
 .section .partnership .swiper-container .swiper-slide{text-align: center;}
 .section .partnership .swiper-container img{max-width: 200px;max-height: 93px;object-fit: cover;}
 .section .caculator{position: relative;}
+.section .caculator dl{width: 300px;text-align: center;}
 .section .caculator>img{height: 300px;object-fit: cover;vertical-align: bottom;width: 100%;}
-.section .caculator>div{position: absolute;top: 90px;color: #fff;margin-right: auto;margin-left: auto;left: 0;right: 0;width: 650px;}
-.section .caculator>div>dl:not(:last-child){margin-right: 75px;}
+.section .caculator>div{position: absolute;top: 90px;color: #fff;margin-right: auto;margin-left: auto;left: 0;right: 0;}
+/*.section .caculator>div>dl:not(:last-child){margin-right: 75px;}*/
 .section .caculator>div>dl>dt{font-size: 52px;}
 .section .caculator>div>dl>dd{text-align: center;font-size:25px;}
 .section .ready{position: relative;}
