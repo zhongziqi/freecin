@@ -1,6 +1,6 @@
 @font-face{font-family: 'myFirstFont';src: url(PingFang_SC_Regular.ttf);}
 *{margin: 0;padding: 0;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;letter-spacing: 1px;font-weight: normal; }
-body{color: #333333;font-size: 12px;line-height: 1.5;font-family:'myFirstFont',"微软雅黑",Arial,Helvetica,sans-serif;padding-top: 80px;}
+body{color: #333333;font-size: 12px;line-height: 1.5;font-family:'myFirstFont',"微软雅黑",Arial,Helvetica,sans-serif;padding-top: 80px;min-width: 1200px;}
 button,input,select,textarea{vertical-align: middle;border: 0; border-radius: 0 ;background: none ;color:inherit;font-size: inherit;outline: none; resize:none;position: relative;}
 a{color: #333333;text-decoration: none;}
 li{list-style-type: none;}
