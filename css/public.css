@@ -45,7 +45,7 @@ strong,i{font-style: normal;font-weight: normal;}
 .header .lists .solutions>li{height: 20px;line-height: 20px;margin-top: 22px;padding-bottom: 23px;}
 .header .lists .solutions ul{padding-left: 500px;}
 /*首页样式*/
-.section .first_img>img{position: relative;width: 100%;height: auto;vertical-align: bottom;}
+.section .first_img>img{position: relative;width: 100%;height: 800px;vertical-align: bottom;object-fit: cover;}
 .section .first_img>.cover{position: absolute;top: 0;left: 0;right: 0;margin-left: auto;margin-right: auto;}
 .section .first_img>.cover .header{background: none;border-bottom: 1px solid #fff;}
 .section .first_img>.cover .describe{margin-top: 100px;text-align: center;color: #fff;}
@@ -57,7 +57,7 @@ strong,i{font-style: normal;font-weight: normal;}
 .section .first_img>.cover .describe>p:nth-child(2){font-size: 36px;line-height: 50px;}
 .section .first_img>.cover .logo img{height: 48px;}
 .section .succ_case{margin-top: 67px;}
-.section .succ_case_list{margin-top: 73px;}
+.section .succ_case_list{margin-top: 73px;min-height: 668px;}
 .section .succ_case_list dl{width:373px;border: 1px solid transparent;padding: 8px;}
 .section .succ_case_list dl:hover{border: 1px solid #0885F3;}
 
@@ -81,7 +81,7 @@ strong,i{font-style: normal;font-weight: normal;}
 .section .caculator>div>dl>dt{font-size: 52px;}
 .section .caculator>div>dl>dd{text-align: center;font-size:25px;}
 .section .ready{position: relative;}
-.section .ready>img{height: 444px;width: 100%;object-fit: cover;}
+.section .ready>img{height: 444px;width: 100%;object-fit: cover;vertical-align: bottom;}
 .section .ready>.cover{position: absolute;top: 105px;left: 0;right: 0;}
 .section .ready>.cover>p:first-child{text-align: center;color: #000;font-size: 64px;word-spacing: .42px;line-height: 90px;margin-left: auto;margin-right: auto;}
 .button{cursor: pointer;margin-top: 70px;width:220px;height:48px;background:rgba(8,133,243,1);border-radius: 4px ;font-size: 18px;color: #fff;text-align: center;line-height: 48px;margin-left: auto;margin-right: auto;}

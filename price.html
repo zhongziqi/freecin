@@ -15,7 +15,7 @@
     <div class="header" id="header" >
       <common-header></common-header>
     </div>
-    <div class="section">
+    <div class="section" id="price">
       <!-- price main page  -->
       <div class="first_img">
         <img src="img/new-york-city-buildings-and-water-towers_4460x4460@2x.png" alt="">
@@ -62,16 +62,18 @@
         <div class="cover box_center">
           <div class="ul">
             <ul class="clear">
-              <li class="fl border_bottom">智能短信</li>
-              <li class="fl">智能语音</li>
-              <li class="fl">方案定制</li>
+              <li class="fl pointer" v-bind:class="{border_bottom:text}" @click="price_type('text')">智能短信</li>
+              <li class="fl pointer" v-bind:class="{border_bottom:voice}" @click="price_type('voice')">智能语音</li>
+              <li class="fl pointer" v-bind:class="{border_bottom:custom}"  @click="price_type('custom')">方案定制</li>
             </ul>
           </div>
-          <p class="title">起价为每分钟0.0085美元，每分钟0.013美元。</p>
-          <select>
+          <p class="title" v-show="text ">起价为每分钟0.0085美元，每分钟0.013美元。</p>
+          <p class="title" v-show="voice">起价为每分钟0.0015美元，每分钟0.0015美元。</p>
+          <p class="title" v-show="custom ">起价为每分钟0.085美元，每分钟0.085美元。</p>
+          <select v-model='country'>
             <option>中国</option>
+            <option>新加坡</option>
             <option>美国</option>
-            <option>英国</option>
           </select>
           <div class="problem">关于定价问题？</div>
           <div class="button">与我们交谈？</div>
@@ -87,5 +89,6 @@
   <script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
   <script type="text/javascript" src='js/swiper.min.js'></script>
   <script type="text/javascript" src="js/vueComponent.js?ver=1.0"></script>
+  <script type="text/javascript" src='js/price.js'></script>
 
 </html>

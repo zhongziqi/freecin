@@ -19,8 +19,12 @@
 
     <div class="section">
       <!-- 第一页  -->
-      <div class="first_img">
-        <img src="img/new-york-city-buildings-and-water-towers_4460x4460@2x.png" alt="">
+      <div class="first_img" id='main_page'>
+        <img v-if="result.type=='image'" :src="domain+result.img_src" alt="">
+        <!-- <div style="vertical-align:bottom;display:block;"> -->
+          <video v-if="result.type=='video'" :src="domain+result.img_src" height="800" width="100%" autoplay loop>
+          Your browser does not support the video tag.</video>
+        <!-- </div> -->
         <div class="cover">
           <div class="box_center clear  header" >
                   <div class="logo fl pointer">
@@ -121,7 +125,7 @@
         </div>
       </div>
       <!-- 成功案例 -->
-      <div class="succ_case">
+      <div class="succ_case" id='succ_case'>
         <div class="title">
           <div class="sub_title">
             <img src="img/left_white.png" alt="">
@@ -131,38 +135,13 @@
           <p>我们帮助他们实现价值</p>
         </div>
         <div class="box_center succ_case_list clear">
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
-          </dl>
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
-          </dl>
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
-          </dl>
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
-          </dl>
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
-          </dl>
-          <dl class="list fl">
-            <dt><img src="img/new-york-city-buildings-and-water-towers_4460x4460.png" alt=""> </dt>
-            <dd class="ellipsis">帮助XXX提示20%销售额</dd>
-            <dd class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</dd>
+          <dl class="list fl" v-for='item in succ_box'>
+            <dt><img :src="domain+item.img_src" alt=""> </dt>
+            <dd class="ellipsis" v-text='item.title'></dd>
+            <dd class="ellipsis_2" v-text='item.intro'></dd>
           </dl>
         </div>
-        <div class="check_more">
+        <div class="check_more" @click='check_more()'>
           查看更多案例
         </div>
       </div>

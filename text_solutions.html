@@ -194,33 +194,12 @@
             </div>
           </div>
           <div class="swiper-container box_center" >
-      				<div class="swiper-wrapper">
-      						<div class="swiper-slide">
-                    <img src="img/group.png" alt="">
+      				<div class="swiper-wrapper" >
+      						<div class="swiper-slide" v-for='item in swiper_box' @click='to_detail(item.id)'>
+                    <img :src="domain+item.img_src" alt="">
                     <ul>
-                      <li class="ellipsis">帮助XXX提示20%销售额</li>
-                      <li class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</li>
-                    </ul>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/group.png" alt="">
-                    <ul>
-                      <li class="ellipsis">帮助XXX提示20%销售额</li>
-                      <li class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</li>
-                    </ul>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/group.png" alt="">
-                    <ul>
-                      <li class="ellipsis">帮助XXX提示20%销售额</li>
-                      <li class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</li>
-                    </ul>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/group.png" alt="">
-                    <ul>
-                      <li class="ellipsis">帮助XXX提示20%销售额</li>
-                      <li class="ellipsis_2">为了XXX提高实时通讯，XXX用freenic的短信API增加了一层验证</li>
+                      <li class="ellipsis" v-text='item.title'></li>
+                      <li class="ellipsis_2" v-text='item.intro'></li>
                     </ul>
                   </div>
       				</div>
