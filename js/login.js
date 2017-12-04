@@ -23,10 +23,10 @@ var app = new Vue({
                         success: function (data) {
                             setCookie('token',data.data.token);
                             setCookie('userInfo',data.data.user_info);
-                            alert(data.data.message)
+                            alert(data.message)
                         },
                         error:function(data){
-                            alert(data.data.message)
+                            alert(data.message)
                         }
                     });
                 }

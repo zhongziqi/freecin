@@ -20,13 +20,17 @@
     <!--内容-->
       <div class="main" id="main">
             <div class="box_center the_center">
-                <h2 class="the_title">构建全球云通信区块 ，让您能够构建在您业</h2>
+                <h2 class="the_title">{{detail.title}}</h2>
                 <div class="data_box">
-                    <span class="the_data">2017-11-25／</span>
-                    <span class="author">freenic</span>
+                    <span class="the_data">{{detail.time}}</span>
+                    <span class="the_data" v-if='detail.author'>/</span>
+                    <span class="author">{{detail.author}}</span>
                 </div>
-               
-            </div>        
+                <p class="intro">{{detail.intro}}</p>
+                <div v-html="detail.content">
+                </div>  
+            </div> 
+                 
       </div>
     </div>
 

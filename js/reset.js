@@ -15,10 +15,10 @@ var app = new Vue({
                         'email':username,
                     },
                     success: function (data) {
-                        alert(data.data.message)
+                        alert(data.message)
                     },
                     error:function(data){
-                        alert(data.data.message)
+                        alert(data.message)
                     }
                 });
             }

@@ -3,7 +3,7 @@
 .register_ .frame{box-shadow: 0px 0px 14px 0px rgba(0,0,0,.1);width: 685px;height: 576px;background: #fff;margin-left: auto;margin-right: auto;}
 .register_ .frame>.title{margin-bottom: 43px;text-align: left;height: 80px;border-bottom: 1px solid #D9D9D9 ;font-size: 36px;color: #333;line-height: 80px;padding-left: 38px;}
 .register_ .frame>.name{width: 544px;margin-left: auto;margin-right: auto;margin-bottom: 33px;}
-.register_ .frame>.name>input{padding-left: 19px;width: 264px;height: 50px;line-height: 50px;color: #FC2143;box-shadow: 0 1px 5px 0 rgba(0,0,0,.15);border: 1px solid #dbdbdb;}
+.register_ .frame>.name>input{padding-left: 19px;width: 264px;height: 50px;line-height: 50px;color: #000;box-shadow: 0 1px 5px 0 rgba(0,0,0,.15);border: 1px solid #dbdbdb;}
 .register_ .frame>.name>input:first-child{margin-right: 16px;}
 .register_ .frame>.name.large{width: 544px;}
 .register_ .frame>.name.large input{width: 100%;}

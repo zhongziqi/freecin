@@ -1,8 +1,45 @@
 var app = new Vue({
 	el: '#main',
 	data: {
+		the_history:[],
+		the_banner:[],
+		domain:''
 	},
-	created: function() {
+	created: function() {	
+		//图片
+		this.domain = sessionStorage.getItem('domain');
+		let that = this;
+
+		//top轮播
+		$.ajax({
+			method: "post",
+			url: api+'/banner/index',
+			success: function (data) {
+				if(data.code=='200'){
+					that.the_banner = data.data.list;
+				}
+			},
+			error:function(data){
+				alert(data.message)
+			}
+		});
+
+		//公司历程	
+		$.ajax({
+			method: "post",
+			url: api+'/index/history',
+			success: function (data) {
+				if(data.code=='200'){
+					that.the_history = data.data.info;
+				}
+			},
+			error:function(data){
+				alert(data.message)
+			}
+		});
+
+		//
+
 	},
   mounted:function(){
 		var swiper = new Swiper('.swiper-container_one', {

@@ -14,6 +14,8 @@
     <script type="text/javascript" src='js/vue.js'></script>
   </head>
   <body>
+      <div id="partnership" style="display: none"> </div>
+      <div id="contact" style="display: none"> </div>
     <div class="header" id="header">
         <common-header></common-header>
     </div>
@@ -33,20 +35,20 @@
                 </div>
             </div>
             <div class="blog_all box_center">
-                <div class="aBox">
+                <div class="aBox" v-for="item in blogList" @click="toDetail(item.id)">
                     <div class="img_box">
-                        <img class="img_cover" src="img/Group 29.png" alt="">
+                        <img class="img_cover" :src="domain + item.img_src" alt="">
                     </div>
                     <div class="txt_box">
-                        <p class="box_title ellipsis_2">海外访问-云之桥，聆听您真实的产品感受</p>
-                        <p class="title_de ellipsis_2">提供海外AWS云主机联通服务，保证海外用户消息收发速度；选用BGP机房、全球多点覆盖</p>
+                        <p class="box_title ellipsis_2">{{item.title}}</p>
+                        <p class="title_de ellipsis_2">{{item.intro}}</p>
                     </div>
                     <div class="data_txt">
-                        <span>Data</span>
+                        <span>{{item.time}}</span>
                     </div>
                 </div>
             </div>
-            <div class="aBtn">加载更多</div>
+            <div class="aBtn pointer" @click="getMore">加载更多</div>
         
       </div>
     </div>

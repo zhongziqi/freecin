@@ -36,3 +36,10 @@
     width: 100%;
     text-align: center;
 }
+.main .intro{
+    width:100%;
+    font-size:12px;
+    font-family:PingFangSC-Regular;
+    color:rgba(74,74,74,1);
+    line-height:19px;
+}

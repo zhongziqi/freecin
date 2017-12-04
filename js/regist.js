@@ -31,7 +31,7 @@ var app = new Vue({
                                 }else{
                                      $.ajax({
                                         method: "post",
-                                        url: api+'/api/user/register',
+                                        url: api+'/user/register',
                                         data: {
                                             'first_name':name_one,
                                             'last_name':name_two,
@@ -41,10 +41,10 @@ var app = new Vue({
                                             'confirm_password':pwd_confirm
                                         },
                                         success: function (data) {
-                                            // alert(data.data.message)
+                                            alert(data.message)
                                         },
                                         error:function(data){
-                                            // alert(data.data.message)
+                                            alert(data.message)
                                         }
                                     });
                                 }
