@@ -52,13 +52,53 @@ var app = new Vue({
             prevButton: '.swiper-button-prev'
 		});
 
-		var swiper_two = new Swiper('.swiper-container_two', {
+		// var swiper_two = new Swiper('.swiper-container_two', {
+		// 	pagination: '.swiper-pagination',
+		// 	slidesPerView: 5,
+		// 	paginationClickable: true,
+		// 	uniqueNavElements :false
+		// });
+		// console.log(swiper_two,'yessese')
+	}
+
+});
+
+
+
+var apps = new Vue({
+	el: '#partnerships',
+	data: {
+		swiper_box:[{img_src:'img/group.png'}],
+		swiper_two:''
+	},
+	created: function() {
+	},
+  mounted:function(){
+		this.swiper_two = new Swiper('.swiper-container_two', {
 			pagination: '.swiper-pagination',
 			slidesPerView: 5,
 			paginationClickable: true,
-			uniqueNavElements :false
+			uniqueNavElements :false,
+			observer:true,
+			observeParents:true
 		});
-		// console.log(swiper_two,'yessese')
+		this.get_swiper_box();
+	},
+	methods:{
+		get_swiper_box:function(){
+			var that = this;
+			that.swiper_box=[];
+			var domain = sessionStorage.getItem('domain');
+			$.ajax({
+				url:api+'/index/partner',
+				success:function(res){
+					var result = res.data.info;
+					for(var i=0;i<result.length;i++){
+						that.swiper_box.push({img_src:domain+result[i].img_src})
+					}
+				}
+			})
+		}
 	}
 
 });

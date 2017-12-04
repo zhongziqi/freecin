@@ -46,14 +46,6 @@ var app = new Vue({
             if(that.succ_box.customer!=result.customer){
               that.succ_box.customer++
             }
-            // if(that.succ_box.case==result.case&&that.succ_box.program==result.program){
-            //   that.succ_box.employees=result.employees;
-            //   that.succ_box.customer=result.customer;
-            //   clearInterval(that.nTime1);
-            // }
-            // if(that.succ_box.case==result.case&&that.succ_box.program==result.program&&that.succ_box.employees==result.employees&&that.succ_box.customer==result.customer){
-            //   clearInterval(that.nTime1)
-            // }
           },10);
           setTimeout(function(){
               that.succ_box.employees=result.employees;
@@ -65,8 +57,73 @@ var app = new Vue({
       })
     }
   }
-
 });
+var app1 = new Vue({
+	el: '#succ_case',
+	data: {
+		succ_box:[],
+		domain:'',
+		page_size:6
+	},
+	created: function() {
+	},
+  mounted:function(){
+    // 获取客户成功案例
+
+		this.get_succ_box();
+	},
+  methods:{
+		check_more:function(){
+
+		},
+		get_succ_box:function(){
+			var that = this;
+			that.domain = sessionStorage.getItem('domain');
+			$.ajax({
+				url:api+'/index/caseList',
+				method:'post',
+				data:{
+					type:'all',
+					page_index:1,
+					page_size:that.page_size
+				},
+				success:function(res){
+					var result = res.data.list;
+					that.succ_box=result;
+				}
+			})
+		}
+  }
+});
+
+var app2 = new Vue({
+	el: '#main_page',
+	data: {
+		result:{},
+		domain:''
+	},
+	created: function() {
+	},
+  mounted:function(){
+    // 获取客户成功案例
+
+		this.get_src();
+	},
+  methods:{
+		get_src:function(){
+			var that = this;
+			that.domain = sessionStorage.getItem('domain');
+			$.ajax({
+				url:api+'/index/getTop',
+				success:function(res){
+					that.result = res.data.info;
+				}
+			})
+
+		}
+  }
+});
+
 
 
 $(".section .first_img .cover .header").mouseenter(function(){

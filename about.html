@@ -89,7 +89,7 @@
           </div>
         <div class="section">
           <div  >
-            <div class="partnership">
+            <div class="partnership" id='partnerships'>
           		<div class="title">
           			<div class="sub_title">
           				<img src="img/left_white.png" alt="">
@@ -101,12 +101,7 @@
           		<!-- 滑动开始 -->
           		<div class="swiper-container box_center swiper-container_two" style="height:119px;margin-top:94px;margin-bottom:127px;">
           				<div class="swiper-wrapper">
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-          						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+          						<div class="swiper-slide" v-for='item in swiper_box'><img :src="item.img_src" alt=""></div>
           				</div>
           		</div>
           		<div class="swiper-pagination outside_pagination "></div>

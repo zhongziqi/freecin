@@ -103,9 +103,9 @@ header = Vue.extend({
 	    	          <li class="fl solutios_head"><a href="#">解决方案</a>
 	                  <div class="solutions">
 	                    <ul class="clear  box_center">
-	                      <li class="fl pointer">  <a href="text_solutinos.html">智能短信解决方案</a></li>
-	                      <li class="fl pointer"><a href="text_solutinos.html">智能语音解决方案</a></li>
-	                      <li class="fl pointer"><a href="custon.html">方案定制</a></li>
+	                      <li class="fl pointer">  <a href="text_solutions.html?type=sms">智能短信解决方案</a></li>
+	                      <li class="fl pointer"><a href="audio_solutions.html?type=voice">智能语音解决方案</a></li>
+	                      <li class="fl pointer"><a href="custom.html?type=customized">方案定制</a></li>
 	                      <li class="fl pointer"><a href="price.html">价格</a></li>
 	                    </ul>
 	                  </div>
@@ -162,34 +162,48 @@ partnership = Vue.extend({
 		<!-- 滑动开始 -->
 		<div class="swiper-container box_center" style="height:119px;margin-top:94px;margin-bottom:127px;">
 				<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
-						<div class="swiper-slide"><img src="img/group.png" alt=""></div>
+						<div class="swiper-slide" v-for='item in swiper_box' @click='to_detail(item.id)'><img :src="item.img_src" alt=""></div>
 				</div>
 		</div>
 		<div class="swiper-pagination outside_pagination "></div>
 	</div>`,
 									data:function(){
 										return{
-											swiper:''
+											swiper:'',
+											swiper_box:[{img_src:'img/group.png'}]
 										}
 									},
 									created:function(){
 									},
 									methods:{
+										to_detail:function(id){
+											window.location.href='detail.html?id='+id
+										},
+										get_swiper_box:function(){
+											var that = this;
+											that.swiper_box=[];
+											var domain = sessionStorage.getItem('domain');
+											$.ajax({
+												url:api+'/index/partner',
+												success:function(res){
+													var result = res.data.info;
+													for(var i=0;i<result.length;i++){
+														that.swiper_box.push({img_src:domain+result[i].img_src})
+													}
+												}
+											})
+										}
 									},
 									mounted(){
-										// if(!this.swiper){
-											var swiper = new Swiper('.swiper-container', {
+											this.swiper = new Swiper('.swiper-container', {
 												pagination: '.swiper-pagination',
 												slidesPerView:5,
 												paginationClickable: true,
-												uniqueNavElements :false
+												uniqueNavElements :false,
+												observer:true,
+												observeParents:true
 											});
-										// }
+											this.get_swiper_box();
 
 									}
 });
@@ -308,11 +322,11 @@ footer = Vue.extend({
 	              <li><a href="blog.html">博客</a></li>
 	              <li><a href="about.html">关于我们</a></li>
 	              <li><a href="#"></a></li>
-	              <li><a href="text_solutinos.html">短信解决方案</a></li>
+	              <li><a href="text_solutions.html?type=sms">短信解决方案</a></li>
 	              <li><a href="#"></a></li>
 	              <li><a href="#"></a></li>
 	              <li><a href="#"></a></li>
-	              <li><a href="audio_solutions.html">语音解决方案</a></li>
+	              <li><a href="audio_solutions.html?type=voice">语音解决方案</a></li>
 	            </ul>
 	            <p class="hot_line">企业热线 ：400-071-168 企业邮箱：info@freecin.com</p>
 	            <p>企业地址 ：XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
